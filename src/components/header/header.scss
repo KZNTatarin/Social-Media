@@ -1,0 +1,19 @@
+.header__wrapp {}
+
+.header__content,
+.header__data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__img {
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+}
+
+.header__name {
+    font-weight: 400;
+}

@@ -1,0 +1,22 @@
+.setting__wrapp {
+    form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+}
+
+.setting__img {
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+}
+
+.setting__name {
+    input {
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222222;
+}
+
+body, input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.wrapp {
+  background-color: #292929;
+  width: 100%;
+  border: solid 1px rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin: 10px 0;
+  background-color: #292929;
+}
