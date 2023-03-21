@@ -32,9 +32,9 @@ const CreatePost = (props) => {
     };
 
     const handleImageChange = (e) => {
-        const selectedImg = e.target.files;
-        setCreateImg([selectedImg])
-        console.log(selectedImg);
+        const selectedImg = e.target.files[0];
+        setCreateImg(selectedImg)
+    
     }
 
     return (
