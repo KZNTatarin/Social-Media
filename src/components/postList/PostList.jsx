@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const PostList = () => {
+import PostItem from '../postItem/PostItem';
 
-    const [postList, setPostList] = useState([])
+const PostList = (props) => {
 
     return (
         <div>
-            
+            {props.props.posts.map( (post) => <PostItem post={post}/> )}
         </div>
     );
 };
