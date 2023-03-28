@@ -1,10 +1,9 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Name",
-      "surname" : "Surname",
-      "avatar" : "avatar"
+      "name": "Булат",
+      "surname": "Гисматуллин",
+      "id": 1
     }
   ]
 }

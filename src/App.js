@@ -10,7 +10,7 @@ function App() {
     const [posts, setPosts] = useState([])
 
     const createPost = (newPost) => {
-        setPosts([...posts, newPost])
+        setPosts([newPost, ...posts])
     }
 
 

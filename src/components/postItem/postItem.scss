@@ -2,3 +2,31 @@
     display: flex;
     justify-content: space-between;
 }
+
+.post__text {
+    justify-content: center;
+}
+
+.post__img {
+    text-align: center;
+    width: 100%;
+}
+
+.swiper {
+    justify-content: center;
+    display: flex;
+}
+
+.swiper-wrapper {
+    max-width: 500px;
+    align-items: center;
+}
+
+.post-img {
+    max-height: 510px;
+    align-self: center;
+}
+
+.swiper-pagination {
+    margin-bottom: -10px;
+}

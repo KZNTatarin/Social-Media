@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import MyButton from '../UI/myButton/MyButton';
 import MyInput from '../UI/myInput/MyInput';
 
@@ -7,11 +7,12 @@ import './createPost.scss'
 const CreatePost = (props) => {
 
     const [createInput, setCreatInput] = useState('');
-    const [createImg, setCreateImg] = useState(null);
+    const [createImg, setCreateImg] = useState([]);
+    const fileInputRef = useRef(null)
 
-    const addNewPost = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
-
+       
         const newPost = {
             id: Date.now(),
             createInput,
@@ -19,21 +20,10 @@ const CreatePost = (props) => {
         }
 
         props.createPost.create(newPost)
-
-        setCreatInput('');
-        setCreateImg(null);
-      
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const files = e.target.files;
-        console.log(files);
     };
 
     const handleImageChange = (e) => {
-        const selectedImg = e.target.files[0];
-        setCreateImg(selectedImg)
+        setCreateImg([...createImg, ...e.target.files]);
     
     }
 
@@ -54,9 +44,9 @@ const CreatePost = (props) => {
                             accept='image/*'
                             type="file"
                             multiple
+                            ref={fileInputRef}
                         />
-                        <MyButton onClick={addNewPost}>Добавить</MyButton>
-                        {createImg && <img src={URL.createObjectURL(createImg)} alt="selected image" />}
+                        <MyButton>Добавить</MyButton>
                     </form>
                 </div>
             </div>
